@@ -1,12 +1,23 @@
 <?php
 $array = ["p1","p2","p3","p4","p5","p6","p7","p8","p9","p10"];
+echo "<br>";
+echo "<br>";
+echo "the orginal array  ";
+echo "<br>";
+echo "<br>";
+print_r($array);
+echo "<br>";
+echo "<br>";
+echo "the array after deleting  ";
+echo "<br>";
+echo "<br>";
 $array = \array_diff($array, ["p5","p6","p7","p8","p9","p10"]);
 print_r($array);
 ?>
 <br>
 <?php
 echo "<br>";
-echo "the array is given below ";
+echo "shuffled array is ";
 echo "<br>";
 echo "<br>";
 $a = $array;
@@ -41,3 +52,4 @@ print_r( partition( $citylist, 3 ) );
 
 </body>
 </html>
+
