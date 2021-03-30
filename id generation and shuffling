@@ -1,0 +1,43 @@
+<?php
+$array = ["p1","p2","p3","p4","p5","p6","p7","p8","p9","p10"];
+$array = \array_diff($array, ["p5","p6","p7","p8","p9","p10"]);
+print_r($array);
+?>
+<br>
+<?php
+echo "<br>";
+echo "the array is given below ";
+echo "<br>";
+echo "<br>";
+$a = $array;
+shuffle($a);
+print_r($a);
+?>
+
+<?php
+
+function partition( $list, $p ) {
+    $listlen = count( $list );
+    $partlen = floor( $listlen / $p );
+    $partrem = $listlen % $p;
+    $partition = array();
+    $mark = 0;
+    for ($px = 0; $px < $p; $px++) {
+        $incr = ($px < $partrem) ? $partlen + 1 : $partlen;
+        $partition[$px] = array_slice( $list, $mark, $incr );
+        $mark += $incr;
+    }
+    return $partition;
+}
+echo "<br>";
+echo "<br>";
+echo "the finall array  ";
+echo "<br>";
+echo "<br>";
+$citylist =$a;
+print_r( partition( $citylist, 3 ) );
+
+?>
+
+</body>
+</html>
